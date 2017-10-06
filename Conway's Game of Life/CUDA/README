@@ -1,0 +1,17 @@
+Conway's Game of Life CUDA program instructions
+-----------------------------------------------
+
+1. Build with makefile:
+> make
+
+2. Execute with no parameters to view the actual parameters** that need to be passed to
+   the program:
+> ./bin/golcuda
+
+3. Usage:
+ <executable> -readfile <input file> -steps <number of steps> -check_termination <yes or no> <-print> : for reading input from file
+ OR
+ <executable> -random <grid_size> -steps <number of steps> -check_termination <yes or no>  <-print> 	: for producing random input
+
+
+** Grid size must be dividable by the square root of the number of the processes.

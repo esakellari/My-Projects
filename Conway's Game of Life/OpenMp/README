@@ -1,0 +1,25 @@
+Conway's Game of Life MPI+OpenMp program instructions
+-----------------------------------------------
+
+Folder ‘src’:  source files.
+Folder ‘obj’:  object files
+Folder ‘bin’:  binary files.
+
+Files:
+src/functionality.c   : functions of operations executed by the main program.
+src/functionality.h   : header of all functions.
+src/gol_omp_main.c    : main
+
+1. Build with makefile:
+> make
+
+2. Execute with no parameters to view the actual parameters** that need to be passed to
+   the program:
+> mpiexec -n <number of processes> ./bin/gol_omp
+
+3. Usage:
+ <executable> -readfile <input file> -steps <number of steps> -threads_num <number of threads> -check_termination <yes or no> <-print> : for reading input from file
+ OR
+ <executable> -random <grid_size> -steps <number of steps> -threads_num <number of threads> -check_termination <yes or no>  <-print> 	: for producing random input
+
+** Grid size must be dividable by the square root of the number of the processes.
