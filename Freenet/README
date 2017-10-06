@@ -1,0 +1,15 @@
+A secure and anonymous distributed storage service
+--------------------------------------------------
+
+1) > cd src/main/java
+ 
+2) Compile:
+> javac -cp . *.java
+
+2) Start rmiregistry for Java RMI.
+> rmiregistry &
+
+3)Run:
+> java -cp . -Djava.rmi.server.codebase=file:./ NodeMain <node name> <node folder path> <existing node name> 
+
+For the first node of the system, the existing node name is empty.
